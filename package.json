@@ -1,0 +1,10 @@
+{
+  "name": "kaori-sushi-menu",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Cardapio web com pedidos e confirmacao por WhatsApp.",
+  "scripts": {
+    "start": "node server.js",
+    "generate:assets": "node scripts/generate-hero.js"
+  }
+}

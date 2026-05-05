@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Acompanhar pedido</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body class="tracking-page">
+    <header class="site-header shell compact-header">
+      <div>
+        <p class="eyebrow">Status do pedido</p>
+        <a class="brand" href="/">Acompanhar confirmacao</a>
+      </div>
+      <nav class="header-actions">
+        <a class="ghost-link" href="/">Novo pedido</a>
+      </nav>
+    </header>
+
+    <main class="shell tracking-layout">
+      <section class="tracking-hero reveal">
+        <div>
+          <p class="eyebrow">Link do cliente</p>
+          <h1>Veja quando a loja aprovar o pedido</h1>
+          <p>Use o link recebido ao finalizar a compra. Esta tela atualiza o status e mostra o resumo do que foi enviado.</p>
+        </div>
+        <form id="tracking-form" class="inline-form compact">
+          <label>
+            <span>Codigo do pedido</span>
+            <input id="tracking-id" type="text" placeholder="KS-AB12" />
+          </label>
+          <label>
+            <span>Token</span>
+            <input id="tracking-token" type="text" placeholder="Cole o token do link" />
+          </label>
+          <button class="primary-button" type="submit">Buscar</button>
+        </form>
+      </section>
+
+      <section id="recent-orders-panel" class="tracking-card reveal recent-orders-panel" hidden>
+        <div class="card-head">
+          <div>
+            <p class="eyebrow">Atalho rapido</p>
+            <h2>Pedidos deste aparelho</h2>
+          </div>
+        </div>
+        <div id="recent-orders-list" class="recent-orders-list"></div>
+      </section>
+
+      <section id="tracking-card" class="tracking-card empty-box reveal">
+        Informe o codigo e o token do link do cliente para consultar o pedido.
+      </section>
+    </main>
+
+    <script src="/order-history.js" defer></script>
+    <script src="/pedido.js" defer></script>
+  </body>
+</html>
