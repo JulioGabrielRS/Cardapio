@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kaori Sushi House</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body class="menu-page">
+    <header class="site-header shell">
+      <div>
+        <p class="eyebrow" id="hero-eyebrow">Cozinha japonesa artesanal</p>
+        <a class="brand" href="/">Kaori Sushi House</a>
+      </div>
+      <nav class="header-actions">
+        <a class="ghost-link" href="/pedido.html" id="tracking-shortcut">Acompanhar pedido</a>
+      </nav>
+    </header>
+
+    <main class="shell home-grid">
+      <section class="intro-column">
+        <section class="hero-panel reveal">
+          <div class="hero-copy">
+            <p class="eyebrow" id="hero-chip"></p>
+            <h1 id="hero-title"></h1>
+            <p class="hero-text" id="hero-description"></p>
+            <div class="hero-meta" id="hero-highlights"></div>
+          </div>
+          <div class="hero-visual">
+            <img src="/assets/hero-sushi.bmp" alt="Combinado de sushi da casa" />
+          </div>
+        </section>
+
+        <section class="notice-strip reveal">
+          <article>
+            <span class="notice-label">Como funciona</span>
+            <p>O cliente faz o pedido, o WhatsApp da loja recebe o resumo e a proprietaria confirma antes do preparo.</p>
+          </article>
+          <article>
+            <span class="notice-label">Retirada ou entrega</span>
+            <p id="business-rules">Carregando regras da loja...</p>
+          </article>
+        </section>
+
+        <section class="menu-section">
+          <div class="section-heading reveal">
+            <div>
+              <p class="eyebrow">Cardapio</p>
+              <h2>Monte o pedido</h2>
+            </div>
+            <p class="section-copy">Escolha os itens e ajuste as quantidades. O total fecha ao lado.</p>
+          </div>
+          <div id="menu-root" class="menu-groups"></div>
+        </section>
+      </section>
+
+      <aside class="order-column">
+        <section class="order-panel reveal">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Pedido</p>
+              <h2>Fechamento</h2>
+            </div>
+            <div class="status-pill pending">Aguardando envio</div>
+          </div>
+
+          <div id="cart-empty" class="empty-box">
+            Adicione itens ao carrinho para liberar o checkout.
+          </div>
+
+          <div id="cart-list" class="cart-list"></div>
+
+          <div class="totals-box">
+            <div>
+              <span>Subtotal</span>
+              <strong id="subtotal-value">R$ 0,00</strong>
+            </div>
+            <div>
+              <span>Entrega</span>
+              <strong id="delivery-value">R$ 0,00</strong>
+            </div>
+            <div class="total-row">
+              <span>Total</span>
+              <strong id="total-value">R$ 0,00</strong>
+            </div>
+          </div>
+
+          <div class="submit-box">
+            <p id="minimum-note" class="form-note"></p>
+            <p class="form-note">Os dados do cliente aparecem apenas na etapa final do pedido.</p>
+            <button id="open-checkout" type="button" class="primary-button">Concluir pedido</button>
+          </div>
+        </section>
+      </aside>
+    </main>
+
+    <dialog id="checkout-modal" class="checkout-modal">
+      <div class="checkout-shell">
+        <div class="card-head">
+          <div>
+            <p class="eyebrow">Etapa final</p>
+            <h2>Confirmar dados do pedido</h2>
+          </div>
+          <button id="close-checkout" class="ghost-link button-reset" type="button">Fechar</button>
+        </div>
+
+        <div class="checkout-layout">
+          <section class="checkout-preview">
+            <div class="panel-head">
+              <div>
+                <p class="eyebrow">Resumo</p>
+                <h3>Seu carrinho</h3>
+              </div>
+              <div class="status-pill pending">Ultima revisao</div>
+            </div>
+
+            <div id="checkout-empty" class="empty-box">
+              Adicione itens ao carrinho antes de concluir.
+            </div>
+
+            <div id="checkout-cart-list" class="cart-list checkout-cart-list"></div>
+
+            <div class="totals-box compact-totals">
+              <div>
+                <span>Subtotal</span>
+                <strong id="checkout-subtotal-value">R$ 0,00</strong>
+              </div>
+              <div>
+                <span>Entrega</span>
+                <strong id="checkout-delivery-value">R$ 0,00</strong>
+              </div>
+              <div class="total-row">
+                <span>Total</span>
+                <strong id="checkout-total-value">R$ 0,00</strong>
+              </div>
+            </div>
+          </section>
+
+          <form id="checkout-form" class="checkout-form">
+            <div class="field-grid two">
+              <label>
+                <span>Nome</span>
+                <input name="customerName" type="text" placeholder="Nome do cliente" required />
+              </label>
+              <label>
+                <span>WhatsApp</span>
+                <input name="customerPhone" type="tel" placeholder="(34) 991815929" required />
+              </label>
+            </div>
+
+            <label>
+              <span>Atendimento</span>
+              <div class="segmented">
+                <button type="button" class="segment active" data-service="delivery">Entrega</button>
+                <button type="button" class="segment" data-service="pickup">Retirada</button>
+              </div>
+            </label>
+
+            <div id="address-fields" class="field-grid two">
+              <label>
+                <span>Rua</span>
+                <input name="street" type="text" placeholder="Rua e avenida" />
+              </label>
+              <label>
+                <span>Numero</span>
+                <input name="number" type="text" placeholder="123" />
+              </label>
+              <label>
+                <span>Bairro</span>
+                <input name="neighborhood" type="text" placeholder="Bairro" />
+              </label>
+              <label>
+                <span>Referencia</span>
+                <input name="reference" type="text" placeholder="Ponto de referencia" />
+              </label>
+            </div>
+
+            <div class="field-grid two">
+              <label>
+                <span>Pagamento</span>
+                <select name="paymentMethod">
+                  <option value="pix">Pix</option>
+                  <option value="card">Cartao</option>
+                  <option value="cash">Dinheiro</option>
+                </select>
+              </label>
+              <label id="change-wrapper" class="hidden-field">
+                <span>Troco para</span>
+                <input name="changeFor" type="number" min="0" step="0.01" placeholder="0,00" />
+              </label>
+            </div>
+
+            <label>
+              <span>Observacoes</span>
+              <textarea name="notes" rows="3" placeholder="Sem cebola, mais shoyu, tocar interfone..."></textarea>
+            </label>
+
+            <div class="submit-box">
+              <button id="submit-order" type="submit" class="primary-button">Enviar pedido para confirmacao</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </dialog>
+
+    <dialog id="success-modal" class="result-modal">
+      <div class="result-shell">
+        <p class="eyebrow">Pedido criado</p>
+        <h2 id="result-title">Aguardando confirmacao da loja</h2>
+        <p id="result-copy"></p>
+        <div class="result-card" id="result-summary"></div>
+        <div class="result-actions">
+          <a id="whatsapp-link" class="primary-button" href="#" target="_blank" rel="noreferrer">Abrir WhatsApp</a>
+          <a id="tracking-link" class="secondary-button" href="/pedido.html">Acompanhar status</a>
+        </div>
+        <button id="close-result" class="ghost-link button-reset" type="button">Fechar</button>
+      </div>
+    </dialog>
+
+    <a id="floating-tracking-shortcut" class="floating-shortcut" href="/pedido.html">
+      <span class="floating-shortcut__label">Acompanhar pedido</span>
+      <strong id="floating-tracking-count" class="floating-shortcut__count" hidden>0</strong>
+    </a>
+
+    <script src="/order-history.js" defer></script>
+    <script src="/app.js" defer></script>
+  </body>
+</html>

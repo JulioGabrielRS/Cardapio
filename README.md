@@ -1,20 +1,29 @@
 # Cardapio web com confirmacao por WhatsApp
 
-App simples para uma pequena operacao de comida japonesa, com:
+Aplicacao web para uma pequena operacao de comida japonesa com:
 
 - cardapio online
 - carrinho e checkout
 - envio do resumo do pedido para o WhatsApp da loja
-- status inicial como `aguardando confirmacao`
-- painel da proprietaria para confirmar ou recusar
-- pagina de acompanhamento do cliente
+- acompanhamento de status pelo cliente
+- painel da proprietaria com PIN para confirmar, recusar ou marcar como pronto
+
+## Estrutura
+
+- `server.js`: servidor HTTP e API
+- `public/`: telas do cliente e da administracao
+- `data/store.example.json`: configuracao base da loja
+- `scripts/generate-hero.js`: geracao da imagem principal
 
 ## Como rodar
 
+Este projeto nao depende de pacotes externos.
+
 ```bash
-node scripts/generate-hero.js
-node server.js
+npm start
 ```
+
+Na primeira execucao, se `data/store.json` nao existir, o servidor cria esse arquivo automaticamente a partir de `data/store.example.json`.
 
 Depois abra:
 
@@ -22,11 +31,9 @@ Depois abra:
 - `http://localhost:3000/admin.html`
 - `http://localhost:3000/pedido.html`
 
-## Onde editar
+## Configuracao da loja
 
-Tudo principal fica em [data/store.json](</C:/Users/juliogrs/OneDrive - FAZENDA AGUA SANTA/Documentos/New project/data/store.json>).
-
-Troque estes campos antes de usar de verdade:
+Edite `data/store.json` com os dados reais da operacao. Os campos principais sao:
 
 - `business.name`
 - `business.whatsapp`
@@ -37,19 +44,26 @@ Troque estes campos antes de usar de verdade:
 - `owner.adminPin`
 - `categories`
 
-Os pedidos ficam salvos em [data/orders.json](</C:/Users/juliogrs/OneDrive - FAZENDA AGUA SANTA/Documentos/New project/data/orders.json>).
+## Arquivos ignorados no Git
+
+O repositorio agora ignora:
+
+- `data/store.json`: configuracao local da loja
+- `data/orders.json`: pedidos gerados em execucao
+
+Assim, voce pode subir o projeto sem levar PIN real, numero de WhatsApp real ou historico de pedidos.
 
 ## Como funciona o WhatsApp
 
-No fluxo atual, o site abre o WhatsApp com a mensagem do pedido pronta para envio ao numero da loja.
+O sistema monta a mensagem do pedido e abre o WhatsApp com o texto pronto. No painel administrativo, quando o status muda, ele tambem prepara a mensagem para o cliente e exibe uma alternativa manual com abrir no WhatsApp Web e copiar texto.
 
-Isso funciona bem para uma operacao pequena e sem integracao paga, mas tem uma limitacao importante:
+Limitacao atual:
 
-- a mensagem nao e enviada de forma totalmente automatica pelo navegador
-- o cliente ainda precisa confirmar o envio no WhatsApp
+- o navegador nao consegue enviar a mensagem sozinho
+- cliente e proprietaria ainda precisam confirmar o envio no WhatsApp
 
-Se voce quiser envio 100% automatico, o proximo passo e integrar a API oficial do WhatsApp Business ou um provedor como Twilio.
+Para envio automatico de verdade, o proximo passo e integrar a API oficial do WhatsApp Business ou um provedor como Twilio.
 
-## PIN do painel
+## Antes de subir
 
-O exemplo sai com PIN `2468` em `data/store.json`. Troque antes de usar fora de teste.
+Revise `data/store.example.json` e deixe esse arquivo com valores de exemplo, nao com os dados reais da loja.

@@ -8,6 +8,7 @@ const ROOT = __dirname;
 const PUBLIC_DIR = path.join(ROOT, "public");
 const DATA_DIR = path.join(ROOT, "data");
 const STORE_FILE = path.join(DATA_DIR, "store.json");
+const STORE_EXAMPLE_FILE = path.join(DATA_DIR, "store.example.json");
 const ORDERS_FILE = path.join(DATA_DIR, "orders.json");
 const SESSION_TTL_MS = 1000 * 60 * 60 * 12;
 const MAX_BODY_BYTES = 1024 * 1024;
@@ -49,10 +50,17 @@ function sanitizeStore(rawStore) {
 
 async function ensureDataFiles() {
   await fs.mkdir(DATA_DIR, { recursive: true });
+
   try {
     await fs.access(STORE_FILE);
   } catch {
-    throw new Error("Arquivo data/store.json nao encontrado.");
+    try {
+      await fs.access(STORE_EXAMPLE_FILE);
+      const template = await fs.readFile(STORE_EXAMPLE_FILE, "utf8");
+      await fs.writeFile(STORE_FILE, template, "utf8");
+    } catch {
+      throw new Error("Arquivo data/store.json nao encontrado e data/store.example.json tambem nao esta disponivel.");
+    }
   }
 
   try {
@@ -264,6 +272,16 @@ function buildCustomerStatusMessage(order, store, baseUrl, type) {
   lines.push("");
   lines.push(`Acompanhar pedido: ${trackingUrl}`);
   return lines.join("\n");
+}
+
+function buildWhatsAppLinks(phone, message) {
+  const cleanPhone = onlyDigits(phone);
+  const encodedMessage = encodeURIComponent(message);
+
+  return {
+    appUrl: `https://wa.me/${cleanPhone}?text=${encodedMessage}`,
+    webUrl: `https://web.whatsapp.com/send/?phone=${cleanPhone}&text=${encodedMessage}&type=phone_number&app_absent=0`
+  };
 }
 
 function buildOrderResponse(order) {
@@ -497,16 +515,15 @@ async function handleCreateOrder(req, res, store) {
 
   const baseUrl = getBaseUrl(req, store);
   const whatsappMessage = buildWhatsAppMessage(order, store, baseUrl);
-  const whatsappUrl = `https://wa.me/${onlyDigits(store.business.whatsapp)}?text=${encodeURIComponent(
-    whatsappMessage
-  )}`;
+  const whatsappLinks = buildWhatsAppLinks(store.business.whatsapp, whatsappMessage);
 
   sendJson(res, 201, {
     order: buildOrderResponse(order),
     trackingUrl: `${baseUrl}/pedido.html?id=${encodeURIComponent(order.id)}&token=${encodeURIComponent(
       order.customerToken
     )}`,
-    whatsappUrl,
+    whatsappUrl: whatsappLinks.appUrl,
+    whatsappWebUrl: whatsappLinks.webUrl,
     messagePreview: whatsappMessage
   });
 }
@@ -601,16 +618,15 @@ async function updateOrderDecision(req, res, orderId, type, store, baseUrl) {
 
   await saveOrders(orders);
   const customerWhatsAppMessage = buildCustomerStatusMessage(order, store, baseUrl, type);
-  const customerWhatsAppUrl = `https://wa.me/${onlyDigits(order.customer.phone)}?text=${encodeURIComponent(
-    customerWhatsAppMessage
-  )}`;
+  const customerWhatsAppLinks = buildWhatsAppLinks(order.customer.phone, customerWhatsAppMessage);
 
   sendJson(res, 200, {
     order: {
       ...buildOrderResponse(order),
       statusCopy: getStatusCopy(order.status, order)
     },
-    customerWhatsAppUrl,
+    customerWhatsAppUrl: customerWhatsAppLinks.appUrl,
+    customerWhatsAppWebUrl: customerWhatsAppLinks.webUrl,
     customerWhatsAppMessage
   });
 }

@@ -1,0 +1,849 @@
+[
+  {
+    "id": "KS-6339",
+    "createdAt": "2026-05-05T19:16:41.389Z",
+    "updatedAt": "2026-05-05T19:16:41.543Z",
+    "status": "confirmed",
+    "decision": null,
+    "customerToken": "08988b72bb0762526a8d",
+    "ownerToken": "06fc651171265a90b356c134",
+    "customer": {
+      "name": "Cliente Web",
+      "phone": "11944443333",
+      "serviceType": "pickup",
+      "address": null,
+      "paymentMethod": "pix",
+      "changeFor": null,
+      "notes": "Sem wasabi"
+    },
+    "items": [
+      {
+        "id": "combo-16",
+        "name": "Combinado Kaori 16",
+        "price": 42,
+        "quantity": 1,
+        "total": 42
+      }
+    ],
+    "totals": {
+      "subtotal": 42,
+      "deliveryFee": 0,
+      "total": 42
+    },
+    "estimatedMinutes": 25,
+    "timeline": [
+      {
+        "status": "pending",
+        "label": "Pedido criado",
+        "description": "Aguardando a confirmacao da proprietaria.",
+        "at": "2026-05-05T19:16:41.389Z"
+      },
+      {
+        "status": "confirmed",
+        "label": "Pedido confirmado",
+        "description": "A proprietaria confirmou o pedido e iniciou o preparo.",
+        "at": "2026-05-05T19:16:41.543Z"
+      }
+    ]
+  },
+  {
+    "id": "KS-C3E0",
+    "createdAt": "2026-05-05T19:07:35.252Z",
+    "updatedAt": "2026-05-05T19:08:25.102Z",
+    "status": "confirmed",
+    "decision": null,
+    "customerToken": "a6dc283a9477dfdf6aed",
+    "ownerToken": "60447f7a0bc6f5990c2156cc",
+    "customer": {
+      "name": "Júlio",
+      "phone": "34991815929",
+      "serviceType": "delivery",
+      "address": {
+        "street": "Rua Antônia de Almeida Simões",
+        "number": "85",
+        "neighborhood": "Centro",
+        "reference": "Rua dos Raposo"
+      },
+      "paymentMethod": "pix",
+      "changeFor": null,
+      "notes": ""
+    },
+    "items": [
+      {
+        "id": "combo-16",
+        "name": "Combinado Kaori 16",
+        "price": 42,
+        "quantity": 2,
+        "total": 84
+      }
+    ],
+    "totals": {
+      "subtotal": 84,
+      "deliveryFee": 8,
+      "total": 92
+    },
+    "estimatedMinutes": 45,
+    "timeline": [
+      {
+        "status": "pending",
+        "label": "Pedido criado",
+        "description": "Aguardando a confirmacao da proprietaria.",
+        "at": "2026-05-05T19:07:35.252Z"
+      },
+      {
+        "status": "confirmed",
+        "label": "Pedido confirmado",
+        "description": "A proprietaria confirmou o pedido e iniciou o preparo.",
+        "at": "2026-05-05T19:08:25.102Z"
+      }
+    ]
+  },
+  {
+    "id": "KS-8410",
+    "createdAt": "2026-05-05T19:03:18.517Z",
+    "updatedAt": "2026-05-05T19:07:05.686Z",
+    "status": "ready",
+    "decision": null,
+    "customerToken": "6390b4826d9686b4139c",
+    "ownerToken": "2fe70b382a48770d9834c5bd",
+    "customer": {
+      "name": "Júlio",
+      "phone": "34991815929",
+      "serviceType": "delivery",
+      "address": {
+        "street": "Rua Antônia de Almeida Simões",
+        "number": "85",
+        "neighborhood": "Centro",
+        "reference": ""
+      },
+      "paymentMethod": "pix",
+      "changeFor": null,
+      "notes": ""
+    },
+    "items": [
+      {
+        "id": "combo-16",
+        "name": "Combinado Kaori 16",
+        "price": 42,
+        "quantity": 2,
+        "total": 84
+      }
+    ],
+    "totals": {
+      "subtotal": 84,
+      "deliveryFee": 8,
+      "total": 92
+    },
+    "estimatedMinutes": 45,
+    "timeline": [
+      {
+        "status": "pending",
+        "label": "Pedido criado",
+        "description": "Aguardando a confirmacao da proprietaria.",
+        "at": "2026-05-05T19:03:18.517Z"
+      },
+      {
+        "status": "confirmed",
+        "label": "Pedido confirmado",
+        "description": "A proprietaria confirmou o pedido e iniciou o preparo.",
+        "at": "2026-05-05T19:04:04.200Z"
+      },
+      {
+        "status": "ready",
+        "label": "Pedido pronto",
+        "description": "Pedido pronto e aguardando envio para entrega.",
+        "at": "2026-05-05T19:07:05.686Z"
+      }
+    ]
+  },
+  {
+    "id": "KS-0517",
+    "createdAt": "2026-05-05T19:01:11.809Z",
+    "updatedAt": "2026-05-05T19:02:20.219Z",
+    "status": "ready",
+    "decision": null,
+    "customerToken": "1052c51f4757f498fb8d",
+    "ownerToken": "9a90dafd68957337bd8352b0",
+    "customer": {
+      "name": "Cliente Confirma",
+      "phone": "11955554444",
+      "serviceType": "pickup",
+      "address": null,
+      "paymentMethod": "pix",
+      "changeFor": null,
+      "notes": "Com hashi"
+    },
+    "items": [
+      {
+        "id": "combo-16",
+        "name": "Combinado Kaori 16",
+        "price": 42,
+        "quantity": 1,
+        "total": 42
+      }
+    ],
+    "totals": {
+      "subtotal": 42,
+      "deliveryFee": 0,
+      "total": 42
+    },
+    "estimatedMinutes": 25,
+    "timeline": [
+      {
+        "status": "pending",
+        "label": "Pedido criado",
+        "description": "Aguardando a confirmacao da proprietaria.",
+        "at": "2026-05-05T19:01:11.809Z"
+      },
+      {
+        "status": "confirmed",
+        "label": "Pedido confirmado",
+        "description": "A proprietaria confirmou o pedido e iniciou o preparo.",
+        "at": "2026-05-05T19:01:12.046Z"
+      },
+      {
+        "status": "ready",
+        "label": "Pedido pronto",
+        "description": "Pedido pronto para retirada no local.",
+        "at": "2026-05-05T19:02:20.219Z"
+      }
+    ]
+  },
+  {
+    "id": "KS-C848",
+    "createdAt": "2026-04-28T18:37:13.956Z",
+    "updatedAt": "2026-04-28T18:38:26.506Z",
+    "status": "ready",
+    "decision": null,
+    "customerToken": "e116ef18313b4bbb4c08",
+    "ownerToken": "2dfaeb3aa0b008ec24b0a8b7",
+    "customer": {
+      "name": "Júlio",
+      "phone": "34991815929",
+      "serviceType": "delivery",
+      "address": {
+        "street": "Rua Antônia de Almeida Simões",
+        "number": "85",
+        "neighborhood": "Centro",
+        "reference": "Rua dos Raposo"
+      },
+      "paymentMethod": "pix",
+      "changeFor": null,
+      "notes": ""
+    },
+    "items": [
+      {
+        "id": "combo-16",
+        "name": "Combinado Kaori 16",
+        "price": 42,
+        "quantity": 2,
+        "total": 84
+      }
+    ],
+    "totals": {
+      "subtotal": 84,
+      "deliveryFee": 8,
+      "total": 92
+    },
+    "estimatedMinutes": 45,
+    "timeline": [
+      {
+        "status": "pending",
+        "label": "Pedido criado",
+        "description": "Aguardando a confirmacao da proprietaria.",
+        "at": "2026-04-28T18:37:13.956Z"
+      },
+      {
+        "status": "confirmed",
+        "label": "Pedido confirmado",
+        "description": "A proprietaria confirmou o pedido e iniciou o preparo.",
+        "at": "2026-04-28T18:38:19.552Z"
+      },
+      {
+        "status": "ready",
+        "label": "Pedido pronto",
+        "description": "Pedido pronto e aguardando envio para entrega.",
+        "at": "2026-04-28T18:38:26.506Z"
+      }
+    ]
+  },
+  {
+    "id": "KS-67F3",
+    "createdAt": "2026-04-28T17:50:29.592Z",
+    "updatedAt": "2026-04-28T18:38:44.518Z",
+    "status": "ready",
+    "decision": null,
+    "customerToken": "3f7aaedd1523e5c4890d",
+    "ownerToken": "d6948d8735906983837dfc50",
+    "customer": {
+      "name": "cleiton",
+      "phone": "34991815929",
+      "serviceType": "delivery",
+      "address": {
+        "street": "Rua Antônia de Almeida Simões",
+        "number": "85",
+        "neighborhood": "Centro",
+        "reference": "Rua dos Raposo"
+      },
+      "paymentMethod": "pix",
+      "changeFor": null,
+      "notes": ""
+    },
+    "items": [
+      {
+        "id": "combo-premium",
+        "name": "Combinado Premium 48",
+        "price": 118,
+        "quantity": 1,
+        "total": 118
+      }
+    ],
+    "totals": {
+      "subtotal": 118,
+      "deliveryFee": 8,
+      "total": 126
+    },
+    "estimatedMinutes": 45,
+    "timeline": [
+      {
+        "status": "pending",
+        "label": "Pedido criado",
+        "description": "Aguardando a confirmacao da proprietaria.",
+        "at": "2026-04-28T17:50:29.592Z"
+      },
+      {
+        "status": "confirmed",
+        "label": "Pedido confirmado",
+        "description": "A proprietaria confirmou o pedido e iniciou o preparo.",
+        "at": "2026-04-28T18:38:37.412Z"
+      },
+      {
+        "status": "ready",
+        "label": "Pedido pronto",
+        "description": "Pedido pronto e aguardando envio para entrega.",
+        "at": "2026-04-28T18:38:44.518Z"
+      }
+    ]
+  },
+  {
+    "id": "KS-8D92",
+    "createdAt": "2026-04-28T17:41:51.452Z",
+    "updatedAt": "2026-04-28T17:42:32.334Z",
+    "status": "ready",
+    "decision": null,
+    "customerToken": "d234c631ff87a585c205",
+    "ownerToken": "e637761223164aa0b40aac1b",
+    "customer": {
+      "name": "Júlio",
+      "phone": "34991815929",
+      "serviceType": "delivery",
+      "address": {
+        "street": "Rua Antônia de Almeida Simões",
+        "number": "85",
+        "neighborhood": "Centro",
+        "reference": "Rua dos Raposo"
+      },
+      "paymentMethod": "pix",
+      "changeFor": null,
+      "notes": ""
+    },
+    "items": [
+      {
+        "id": "combo-16",
+        "name": "Combinado Kaori 16",
+        "price": 42,
+        "quantity": 1,
+        "total": 42
+      }
+    ],
+    "totals": {
+      "subtotal": 42,
+      "deliveryFee": 8,
+      "total": 50
+    },
+    "estimatedMinutes": 45,
+    "timeline": [
+      {
+        "status": "pending",
+        "label": "Pedido criado",
+        "description": "Aguardando a confirmacao da proprietaria.",
+        "at": "2026-04-28T17:41:51.452Z"
+      },
+      {
+        "status": "confirmed",
+        "label": "Pedido confirmado",
+        "description": "A proprietaria confirmou o pedido e iniciou o preparo.",
+        "at": "2026-04-28T17:42:28.800Z"
+      },
+      {
+        "status": "ready",
+        "label": "Pedido pronto",
+        "description": "Pedido pronto e aguardando envio para entrega.",
+        "at": "2026-04-28T17:42:32.334Z"
+      }
+    ]
+  },
+  {
+    "id": "KS-DE93",
+    "createdAt": "2026-04-28T17:28:00.069Z",
+    "updatedAt": "2026-04-28T17:28:00.163Z",
+    "status": "ready",
+    "decision": null,
+    "customerToken": "b7788859f842e5285515",
+    "ownerToken": "184df26b0d8aa95728a088ad",
+    "customer": {
+      "name": "Cliente Pronto 2",
+      "phone": "11966665555",
+      "serviceType": "delivery",
+      "address": {
+        "street": "Rua B",
+        "number": "80",
+        "neighborhood": "Centro",
+        "reference": "Casa azul"
+      },
+      "paymentMethod": "pix",
+      "changeFor": null,
+      "notes": "Sem cebolinha"
+    },
+    "items": [
+      {
+        "id": "combo-16",
+        "name": "Combinado Kaori 16",
+        "price": 42,
+        "quantity": 1,
+        "total": 42
+      }
+    ],
+    "totals": {
+      "subtotal": 42,
+      "deliveryFee": 8,
+      "total": 50
+    },
+    "estimatedMinutes": 45,
+    "timeline": [
+      {
+        "status": "pending",
+        "label": "Pedido criado",
+        "description": "Aguardando a confirmacao da proprietaria.",
+        "at": "2026-04-28T17:28:00.069Z"
+      },
+      {
+        "status": "confirmed",
+        "label": "Pedido confirmado",
+        "description": "A proprietaria confirmou o pedido e iniciou o preparo.",
+        "at": "2026-04-28T17:28:00.154Z"
+      },
+      {
+        "status": "ready",
+        "label": "Pedido pronto",
+        "description": "Pedido pronto e aguardando envio para entrega.",
+        "at": "2026-04-28T17:28:00.163Z"
+      }
+    ]
+  },
+  {
+    "id": "KS-5906",
+    "createdAt": "2026-04-28T17:27:03.077Z",
+    "updatedAt": "2026-04-28T17:27:03.219Z",
+    "status": "ready",
+    "decision": null,
+    "customerToken": "9c59192a1eb0086b882e",
+    "ownerToken": "54fc76a0499590e34198005d",
+    "customer": {
+      "name": "Cliente Pronto",
+      "phone": "11977776666",
+      "serviceType": "pickup",
+      "address": null,
+      "paymentMethod": "pix",
+      "changeFor": null,
+      "notes": "Sem molho tare"
+    },
+    "items": [
+      {
+        "id": "combo-16",
+        "name": "Combinado Kaori 16",
+        "price": 42,
+        "quantity": 1,
+        "total": 42
+      }
+    ],
+    "totals": {
+      "subtotal": 42,
+      "deliveryFee": 0,
+      "total": 42
+    },
+    "estimatedMinutes": 25,
+    "timeline": [
+      {
+        "status": "pending",
+        "label": "Pedido criado",
+        "description": "Aguardando a confirmacao da proprietaria.",
+        "at": "2026-04-28T17:27:03.077Z"
+      },
+      {
+        "status": "confirmed",
+        "label": "Pedido confirmado",
+        "description": "A proprietaria confirmou o pedido e iniciou o preparo.",
+        "at": "2026-04-28T17:27:03.211Z"
+      },
+      {
+        "status": "ready",
+        "label": "Pedido pronto",
+        "description": "Pedido pronto para retirada no local.",
+        "at": "2026-04-28T17:27:03.219Z"
+      }
+    ]
+  },
+  {
+    "id": "KS-A6AF",
+    "createdAt": "2026-04-28T17:26:15.489Z",
+    "updatedAt": "2026-04-28T17:41:06.510Z",
+    "status": "ready",
+    "decision": null,
+    "customerToken": "2db71df2052f8f5d0dbb",
+    "ownerToken": "fa5b4a2e3603921302e4a778",
+    "customer": {
+      "name": "Cliente Pronto",
+      "phone": "11977776666",
+      "serviceType": "pickup",
+      "address": null,
+      "paymentMethod": "pix",
+      "changeFor": null,
+      "notes": "Sem molho tare"
+    },
+    "items": [
+      {
+        "id": "combo-16",
+        "name": "Combinado Kaori 16",
+        "price": 42,
+        "quantity": 1,
+        "total": 42
+      }
+    ],
+    "totals": {
+      "subtotal": 42,
+      "deliveryFee": 0,
+      "total": 42
+    },
+    "estimatedMinutes": 25,
+    "timeline": [
+      {
+        "status": "pending",
+        "label": "Pedido criado",
+        "description": "Aguardando a confirmacao da proprietaria.",
+        "at": "2026-04-28T17:26:15.489Z"
+      },
+      {
+        "status": "confirmed",
+        "label": "Pedido confirmado",
+        "description": "A proprietaria confirmou o pedido e iniciou o preparo.",
+        "at": "2026-04-28T17:26:15.627Z"
+      },
+      {
+        "status": "ready",
+        "label": "Pedido pronto",
+        "description": "Pedido pronto para retirada no local.",
+        "at": "2026-04-28T17:41:06.510Z"
+      }
+    ]
+  },
+  {
+    "id": "KS-BE20",
+    "createdAt": "2026-04-28T14:53:39.939Z",
+    "updatedAt": "2026-04-28T17:41:05.222Z",
+    "status": "ready",
+    "decision": null,
+    "customerToken": "88a3250309a561ee6097",
+    "ownerToken": "1ae910fa823f66d33e6da81a",
+    "customer": {
+      "name": "Júlio",
+      "phone": "34991815929",
+      "serviceType": "delivery",
+      "address": {
+        "street": "Rua Antônia de Almeida Simões",
+        "number": "85",
+        "neighborhood": "Centro",
+        "reference": "Rua dos Raposo"
+      },
+      "paymentMethod": "pix",
+      "changeFor": null,
+      "notes": ""
+    },
+    "items": [
+      {
+        "id": "yakisoba",
+        "name": "Yakisoba de File",
+        "price": 39,
+        "quantity": 1,
+        "total": 39
+      },
+      {
+        "id": "temaki-spicy",
+        "name": "Temaki Spicy Tuna",
+        "price": 34,
+        "quantity": 1,
+        "total": 34
+      }
+    ],
+    "totals": {
+      "subtotal": 73,
+      "deliveryFee": 8,
+      "total": 81
+    },
+    "estimatedMinutes": 45,
+    "timeline": [
+      {
+        "status": "pending",
+        "label": "Pedido criado",
+        "description": "Aguardando a confirmacao da proprietaria.",
+        "at": "2026-04-28T14:53:39.939Z"
+      },
+      {
+        "status": "confirmed",
+        "label": "Pedido confirmado",
+        "description": "A proprietaria confirmou o pedido e iniciou o preparo.",
+        "at": "2026-04-28T14:54:47.477Z"
+      },
+      {
+        "status": "ready",
+        "label": "Pedido pronto",
+        "description": "Pedido pronto e aguardando envio para entrega.",
+        "at": "2026-04-28T17:41:05.222Z"
+      }
+    ]
+  },
+  {
+    "id": "KS-471F",
+    "createdAt": "2026-04-28T14:27:34.788Z",
+    "updatedAt": "2026-04-28T17:41:08.934Z",
+    "status": "ready",
+    "decision": null,
+    "customerToken": "0d18838bd9947363ac03",
+    "ownerToken": "ed775618765815adad1f38bb",
+    "customer": {
+      "name": "julio",
+      "phone": "34991815929",
+      "serviceType": "delivery",
+      "address": {
+        "street": "Rua djenjfnjn",
+        "number": "123",
+        "neighborhood": "bairro tal",
+        "reference": ""
+      },
+      "paymentMethod": "pix",
+      "changeFor": null,
+      "notes": ""
+    },
+    "items": [
+      {
+        "id": "cha-verde",
+        "name": "Cha Verde Gelado",
+        "price": 9,
+        "quantity": 5,
+        "total": 45
+      }
+    ],
+    "totals": {
+      "subtotal": 45,
+      "deliveryFee": 8,
+      "total": 53
+    },
+    "estimatedMinutes": 45,
+    "timeline": [
+      {
+        "status": "pending",
+        "label": "Pedido criado",
+        "description": "Aguardando a confirmacao da proprietaria.",
+        "at": "2026-04-28T14:27:34.788Z"
+      },
+      {
+        "status": "confirmed",
+        "label": "Pedido confirmado",
+        "description": "A proprietaria confirmou o pedido e iniciou o preparo.",
+        "at": "2026-04-28T14:54:48.851Z"
+      },
+      {
+        "status": "ready",
+        "label": "Pedido pronto",
+        "description": "Pedido pronto e aguardando envio para entrega.",
+        "at": "2026-04-28T17:41:08.934Z"
+      }
+    ]
+  },
+  {
+    "id": "KS-5461",
+    "createdAt": "2026-04-28T14:19:12.711Z",
+    "updatedAt": "2026-04-28T17:41:08.085Z",
+    "status": "ready",
+    "decision": null,
+    "customerToken": "5c0389ca1223f464b415",
+    "ownerToken": "b1077948f63d8a1e5717fe03",
+    "customer": {
+      "name": "Júlio",
+      "phone": "34991815929",
+      "serviceType": "delivery",
+      "address": {
+        "street": "Rua Antônia de Almeida Simões",
+        "number": "85",
+        "neighborhood": "Centro",
+        "reference": "Rua dos Raposo"
+      },
+      "paymentMethod": "pix",
+      "changeFor": null,
+      "notes": ""
+    },
+    "items": [
+      {
+        "id": "combo-16",
+        "name": "Combinado Kaori 16",
+        "price": 42,
+        "quantity": 2,
+        "total": 84
+      }
+    ],
+    "totals": {
+      "subtotal": 84,
+      "deliveryFee": 8,
+      "total": 92
+    },
+    "estimatedMinutes": 45,
+    "timeline": [
+      {
+        "status": "pending",
+        "label": "Pedido criado",
+        "description": "Aguardando a confirmacao da proprietaria.",
+        "at": "2026-04-28T14:19:12.711Z"
+      },
+      {
+        "status": "confirmed",
+        "label": "Pedido confirmado",
+        "description": "A proprietaria confirmou o pedido e iniciou o preparo.",
+        "at": "2026-04-28T14:21:08.085Z"
+      },
+      {
+        "status": "ready",
+        "label": "Pedido pronto",
+        "description": "Pedido pronto e aguardando envio para entrega.",
+        "at": "2026-04-28T17:41:08.085Z"
+      }
+    ]
+  },
+  {
+    "id": "KS-EC7F",
+    "createdAt": "2026-04-28T14:16:15.656Z",
+    "updatedAt": "2026-04-28T17:41:10.303Z",
+    "status": "ready",
+    "decision": null,
+    "customerToken": "a953216dc99950c1b69e",
+    "ownerToken": "df19e7c2ff7e61d8e87509ad",
+    "customer": {
+      "name": "Cliente Fluxo",
+      "phone": "11988887777",
+      "serviceType": "pickup",
+      "address": null,
+      "paymentMethod": "cash",
+      "changeFor": 100,
+      "notes": "Caprichar no gengibre"
+    },
+    "items": [
+      {
+        "id": "combo-32",
+        "name": "Combinado Kaori 32",
+        "price": 78,
+        "quantity": 1,
+        "total": 78
+      }
+    ],
+    "totals": {
+      "subtotal": 78,
+      "deliveryFee": 0,
+      "total": 78
+    },
+    "estimatedMinutes": 25,
+    "timeline": [
+      {
+        "status": "pending",
+        "label": "Pedido criado",
+        "description": "Aguardando a confirmacao da proprietaria.",
+        "at": "2026-04-28T14:16:15.656Z"
+      },
+      {
+        "status": "confirmed",
+        "label": "Pedido confirmado",
+        "description": "A proprietaria confirmou o pedido e iniciou o preparo.",
+        "at": "2026-04-28T14:16:15.721Z"
+      },
+      {
+        "status": "ready",
+        "label": "Pedido pronto",
+        "description": "Pedido pronto para retirada no local.",
+        "at": "2026-04-28T17:41:10.303Z"
+      }
+    ]
+  },
+  {
+    "id": "KS-082D",
+    "createdAt": "2026-04-28T14:15:05.877Z",
+    "updatedAt": "2026-04-28T17:41:11.094Z",
+    "status": "ready",
+    "decision": null,
+    "customerToken": "1942cb20642ca1ed653c",
+    "ownerToken": "41800f68d79672da6153b284",
+    "customer": {
+      "name": "Cliente Teste",
+      "phone": "11999998888",
+      "serviceType": "delivery",
+      "address": {
+        "street": "Rua A",
+        "number": "123",
+        "neighborhood": "Centro",
+        "reference": "Portao azul"
+      },
+      "paymentMethod": "pix",
+      "changeFor": null,
+      "notes": "Sem wasabi"
+    },
+    "items": [
+      {
+        "id": "combo-16",
+        "name": "Combinado Kaori 16",
+        "price": 42,
+        "quantity": 1,
+        "total": 42
+      },
+      {
+        "id": "cha-verde",
+        "name": "Cha Verde Gelado",
+        "price": 9,
+        "quantity": 1,
+        "total": 9
+      }
+    ],
+    "totals": {
+      "subtotal": 51,
+      "deliveryFee": 8,
+      "total": 59
+    },
+    "estimatedMinutes": 45,
+    "timeline": [
+      {
+        "status": "pending",
+        "label": "Pedido criado",
+        "description": "Aguardando a confirmacao da proprietaria.",
+        "at": "2026-04-28T14:15:05.877Z"
+      },
+      {
+        "status": "confirmed",
+        "label": "Pedido confirmado",
+        "description": "A proprietaria confirmou o pedido e iniciou o preparo.",
+        "at": "2026-04-28T14:15:06.272Z"
+      },
+      {
+        "status": "ready",
+        "label": "Pedido pronto",
+        "description": "Pedido pronto e aguardando envio para entrega.",
+        "at": "2026-04-28T17:41:11.094Z"
+      }
+    ]
+  }
+]

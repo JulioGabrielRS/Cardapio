@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Painel da proprietaria</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body class="admin-page">
+    <header class="site-header shell compact-header">
+      <div>
+        <p class="eyebrow">Operacao</p>
+        <a class="brand" href="/">Painel da proprietaria</a>
+      </div>
+      <nav class="header-actions">
+        <a class="ghost-link" href="/">Voltar ao cardapio</a>
+      </nav>
+    </header>
+
+    <main class="shell admin-layout">
+      <section class="admin-card reveal">
+        <div class="card-head">
+          <div>
+            <p class="eyebrow">Acesso completo</p>
+            <h2>Entrar com PIN</h2>
+          </div>
+        </div>
+        <p class="form-note">Os pedidos e detalhes da operacao aparecem somente depois da autenticacao.</p>
+
+        <div id="admin-locked-state" class="admin-state">
+          <form id="login-form" class="inline-form">
+            <label>
+              <span>PIN administrativo</span>
+              <input id="pin-input" type="password" inputmode="numeric" placeholder="2468" />
+            </label>
+            <button class="primary-button" type="submit">Entrar</button>
+          </form>
+        </div>
+
+        <div id="admin-open-state" class="admin-state" hidden>
+          <p class="form-note">Painel desbloqueado neste navegador.</p>
+          <button id="logout-button" class="secondary-button button-reset" type="button">Bloquear painel</button>
+        </div>
+
+        <p id="login-feedback" class="form-note"></p>
+      </section>
+
+      <section id="notification-card" class="admin-card reveal" hidden>
+        <div class="card-head">
+          <div>
+            <p class="eyebrow">Notificacao do cliente</p>
+            <h2 id="notification-title">Mensagem pronta</h2>
+          </div>
+        </div>
+        <p id="notification-copy" class="form-note"></p>
+        <pre id="notification-message" class="message-preview"></pre>
+        <div class="action-row">
+          <a id="notification-link" class="primary-button" href="#" target="_blank" rel="noreferrer">Abrir WhatsApp Web</a>
+          <button id="copy-notification" class="secondary-button button-reset" type="button">Copiar mensagem</button>
+        </div>
+      </section>
+
+      <div id="admin-private" class="admin-private" hidden>
+        <section class="admin-hero reveal">
+          <div>
+            <p class="eyebrow">Confirmacao manual</p>
+            <h1>Pedidos pendentes, aprovados e recusados</h1>
+            <p>O link que chega no WhatsApp da loja pode abrir um pedido especifico aqui. O acesso completo fica liberado com o PIN administrativo.</p>
+          </div>
+          <div class="admin-stats" id="admin-stats">
+            <article><span>Pendentes</span><strong id="stat-pending">0</strong></article>
+            <article><span>Confirmados</span><strong id="stat-confirmed">0</strong></article>
+            <article><span>Prontos</span><strong id="stat-ready">0</strong></article>
+            <article><span>Recusados</span><strong id="stat-rejected">0</strong></article>
+          </div>
+        </section>
+
+        <section class="admin-card reveal" id="token-card">
+          <div class="card-head">
+            <div>
+              <p class="eyebrow">Acesso rapido</p>
+              <h2>Pedido do link recebido</h2>
+            </div>
+            <span class="status-pill pending" id="token-badge">Sem token</span>
+          </div>
+          <div id="token-order" class="detail-panel empty-box">Abra esta tela por um link do WhatsApp para carregar um pedido especifico.</div>
+        </section>
+
+        <section class="admin-card reveal">
+          <div class="card-head">
+            <div>
+              <p class="eyebrow">Fila da noite</p>
+              <h2>Todos os pedidos</h2>
+            </div>
+            <button id="refresh-orders" class="secondary-button button-reset" type="button">Atualizar</button>
+          </div>
+          <div id="orders-list" class="admin-orders empty-box">Entre com o PIN para ver a fila completa.</div>
+        </section>
+      </div>
+    </main>
+
+    <script src="/admin.js" defer></script>
+  </body>
+</html>

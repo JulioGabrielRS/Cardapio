@@ -1,0 +1,140 @@
+{
+  "business": {
+    "name": "Kaori Sushi House",
+    "tagline": "Combinados, temakis e pratos quentes preparados na hora",
+    "description": "Cardapio online para uma operacao pequena, com confirmacao manual da proprietaria antes do preparo.",
+    "whatsapp": "5534991815929",
+    "address": "Rua das Cerejeiras, 120 - Centro",
+    "city": "Sua cidade",
+    "hours": [
+      "Terca a quinta • 18h00 as 22h30",
+      "Sexta a domingo • 18h00 as 23h30"
+    ],
+    "deliveryFee": 8,
+    "minimumOrder": 35,
+    "pickupEtaMinutes": 25,
+    "deliveryEtaMinutes": 45,
+    "publicBaseUrl": ""
+  },
+  "hero": {
+    "eyebrow": "Cozinha japonesa artesanal",
+    "headline": "Seu pedido entra na fila so depois da confirmacao da loja",
+    "description": "O cliente escolhe os itens, envia o resumo para o WhatsApp da proprietaria e acompanha o status ate a aprovacao."
+  },
+  "highlights": [
+    "Pedido minimo de R$ 35,00",
+    "Pagamento por Pix, cartao ou dinheiro",
+    "Acompanhamento do status do pedido em tempo real"
+  ],
+  "categories": [
+    {
+      "id": "combos",
+      "title": "Combinados",
+      "description": "Os pedidos que mais saem no jantar.",
+      "items": [
+        {
+          "id": "combo-16",
+          "name": "Combinado Kaori 16",
+          "description": "16 unidades com sashimi de salmao, uramaki philadelphia e hot roll.",
+          "price": 42,
+          "badge": "Mais pedido"
+        },
+        {
+          "id": "combo-32",
+          "name": "Combinado Kaori 32",
+          "description": "32 unidades mistas para dividir, com niguiri, uramaki e hot roll.",
+          "price": 78,
+          "badge": "Compartilhar"
+        },
+        {
+          "id": "combo-premium",
+          "name": "Combinado Premium 48",
+          "description": "Selecao premium com salmao, camarao empanado e joy de atum.",
+          "price": 118,
+          "badge": "Casa"
+        }
+      ]
+    },
+    {
+      "id": "temakis",
+      "title": "Temakis",
+      "description": "Montados na hora e enviados frescos.",
+      "items": [
+        {
+          "id": "temaki-salmao",
+          "name": "Temaki de Salmao",
+          "description": "Salmao, cebolinha e cream cheese no cone tradicional.",
+          "price": 32,
+          "badge": "Classico"
+        },
+        {
+          "id": "temaki-spicy",
+          "name": "Temaki Spicy Tuna",
+          "description": "Atum temperado, molho levemente picante e gergelim.",
+          "price": 34,
+          "badge": "Picante"
+        },
+        {
+          "id": "temaki-ebi",
+          "name": "Temaki Ebi Crunch",
+          "description": "Camarao empanado, tarare e crocante de alho-poro.",
+          "price": 36,
+          "badge": "Crocante"
+        }
+      ]
+    },
+    {
+      "id": "quentes",
+      "title": "Quentes",
+      "description": "Itens para completar o pedido.",
+      "items": [
+        {
+          "id": "hot-phila",
+          "name": "Hot Philadelphia",
+          "description": "10 unidades crocantes com salmao e cream cheese.",
+          "price": 30,
+          "badge": "Favorito"
+        },
+        {
+          "id": "gyoza",
+          "name": "Gyoza Suino",
+          "description": "6 unidades grelhadas com molho da casa.",
+          "price": 26,
+          "badge": "Entrada"
+        },
+        {
+          "id": "yakisoba",
+          "name": "Yakisoba de File",
+          "description": "Macarrao oriental com legumes e file bovino.",
+          "price": 39,
+          "badge": "Prato quente"
+        }
+      ]
+    },
+    {
+      "id": "bebidas",
+      "title": "Bebidas",
+      "description": "Opcao simples para fechar o pedido.",
+      "items": [
+        {
+          "id": "cha-verde",
+          "name": "Cha Verde Gelado",
+          "description": "Garrafa 350 ml.",
+          "price": 9,
+          "badge": "Leve"
+        },
+        {
+          "id": "refrigerante",
+          "name": "Refrigerante Lata",
+          "description": "350 ml.",
+          "price": 7,
+          "badge": "Gelado"
+        }
+      ]
+    }
+  ],
+  "owner": {
+    "name": "Marina",
+    "adminPin": "2468"
+  }
+}
