@@ -1,14 +1,18 @@
 const http = require("http");
 const fs = require("fs/promises");
+const os = require("os");
 const path = require("path");
 const crypto = require("crypto");
 
 const PORT = Number(process.env.PORT || 3000);
 const ROOT = __dirname;
 const PUBLIC_DIR = path.join(ROOT, "public");
-const DATA_DIR = path.join(ROOT, "data");
+const DATA_DIR =
+  process.env.KAORI_DATA_DIR ||
+  (process.env.VERCEL ? path.join(os.tmpdir(), "kaori-sushi-menu") : path.join(ROOT, "data"));
+const TEMPLATE_DATA_DIR = path.join(ROOT, "data");
 const STORE_FILE = path.join(DATA_DIR, "store.json");
-const STORE_EXAMPLE_FILE = path.join(DATA_DIR, "store.example.json");
+const STORE_EXAMPLE_FILE = path.join(TEMPLATE_DATA_DIR, "store.example.json");
 const ORDERS_FILE = path.join(DATA_DIR, "orders.json");
 const SESSION_TTL_MS = 1000 * 60 * 60 * 12;
 const MAX_BODY_BYTES = 1024 * 1024;
@@ -731,27 +735,38 @@ async function serveStatic(req, res, url) {
 async function start() {
   await ensureDataFiles();
 
-  const server = http.createServer(async (req, res) => {
-    try {
-      const url = new URL(req.url, `http://${req.headers.host || "localhost"}`);
-      if (url.pathname.startsWith("/api/")) {
-        await handleApi(req, res, url);
-        return;
-      }
-
-      await serveStatic(req, res, url);
-    } catch (error) {
-      console.error(error);
-      sendJson(res, 500, { error: "Erro interno no servidor." });
-    }
-  });
+  const server = http.createServer(handleRequest);
 
   server.listen(PORT, () => {
     console.log(`Servidor em http://localhost:${PORT}`);
   });
 }
 
-start().catch((error) => {
-  console.error(error);
-  process.exit(1);
-});
+async function handleRequest(req, res) {
+  try {
+    await ensureDataFiles();
+
+    const url = new URL(req.url, `http://${req.headers.host || "localhost"}`);
+    if (url.pathname.startsWith("/api/")) {
+      await handleApi(req, res, url);
+      return;
+    }
+
+    await serveStatic(req, res, url);
+  } catch (error) {
+    console.error(error);
+    sendJson(res, 500, { error: "Erro interno no servidor." });
+  }
+}
+
+if (require.main === module) {
+  start().catch((error) => {
+    console.error(error);
+    process.exit(1);
+  });
+}
+
+module.exports = {
+  handleRequest,
+  start
+};
